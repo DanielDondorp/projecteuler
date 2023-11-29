@@ -28,3 +28,8 @@ def permutate(input: list):
         for permutations in permutate(other_digits):
             all_permutations.append([digit] + permutations)
     return all_permutations
+
+def get_common_denominator(a, b):
+    if b == 0:
+        return a
+    return get_common_denom(b, a%b)
