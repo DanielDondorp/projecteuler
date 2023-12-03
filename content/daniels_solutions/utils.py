@@ -33,3 +33,9 @@ def get_common_denominator(a, b):
     if b == 0:
         return a
     return get_common_denom(b, a%b)
+
+def is_prime(n):
+    for i in range(2, int(np.sqrt(np.abs(n)))+1):
+        if n%i==0:
+            return False
+    return True
